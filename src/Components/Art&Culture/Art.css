@@ -1,0 +1,8 @@
+.section {
+  min-width: 150px;
+}
+@media (max-width: 400px) {
+  .ArtHeader {
+    flex-direction: column;
+  }
+}
