@@ -9,6 +9,7 @@ import Chalukyas from "./content/Chalukyas";
 import EarlyVedicAge from "./content/EarlyVedicAge";
 import GuptaAge from "./content/GuptaAge";
 import Haryanka from "./content/Haryanka";
+import History from "./content/History";
 import IndoGreeks from "./content/IndoGreeks";
 import IndusCivilization from "./content/Indus Civilization";
 import KanvaDynasty from "./content/KanvaDynasty";
@@ -31,6 +32,11 @@ import VardhanaDynasty from "./content/VardhanaDynasty";
 
 export const ROUTES = [
   {
+    path: "history",
+    element: <History />,
+    name: "History",
+  },
+  {
     path: "pre-historic",
     element: <Prehistoric />,
     name: "Pre Historic Period",
@@ -43,17 +49,27 @@ export const ROUTES = [
   {
     path: "indus-valley",
     element: <IndusCivilization />,
-    name: "Indus Valley Civilization",
+    name: "Harappan Civilization",
   },
   {
-    path: "early-vedic",
+    path: "rig-vedic-age",
     element: <EarlyVedicAge />,
-    name: "Early Vedic Period",
+    name: "Rig Vedic Period",
   },
   {
     path: "later-vedic",
     element: <LaterVedic />,
     name: "Later Vedic Age",
+  },
+  {
+    path: "Jainism",
+    element: <Mahavira />,
+    name: "Jainism",
+  },
+  {
+    path: "buddhism",
+    element: <Buddha />,
+    name: "Buddhism",
   },
   {
     path: "mahajanapadhas",
@@ -74,16 +90,6 @@ export const ROUTES = [
     path: "nanda",
     element: <Nanda />,
     name: "Nanda Dynasty",
-  },
-  {
-    path: "buddha",
-    element: <Buddha />,
-    name: "Gautama Buddha",
-  },
-  {
-    path: "mahavira",
-    element: <Mahavira />,
-    name: "Mahavira",
   },
   {
     path: "persian",
@@ -177,11 +183,17 @@ export default function Section() {
       </div>
       <div>
         {display ? (
-          <div className="section h-screen overflow-scroll bg-gray-300  bottom-0   pt-[.2em] pl-[.2em] pr-[.2em] pb-[0]">
+          <div className="section h-screen overflow-scroll bg-gray-300 bottom-0 pt-[.2em] pl-[.5em] pr-[.2em] pb-[0]">
             {ROUTES.map((item) => {
               return (
-                <div className="hover:bg-slate-400" key={`${item.name}`}>
-                  <Link to={`/history/ancient/${item.path}`}>{item.name}</Link>
+                <div
+                  onClick={() => setDisplay(false)}
+                  className="hover:bg-slate-400"
+                  key={`${item.name}`}
+                >
+                  <Link to={`/history/ancient/${item.path}`}>
+                    <div>{item.name}</div>
+                  </Link>
                 </div>
               );
             })}

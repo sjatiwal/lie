@@ -209,7 +209,9 @@ export default function Section() {
             {ROUTES.map((item) => {
               return (
                 <div className="hover:bg-slate-400" key={`${item.name}`}>
-                  <Link to={`/history/world/${item.path}`}>{item.name}</Link>
+                  <Link to={`/history/world/${item.path}`}>
+                    <div>{item.name}</div>
+                  </Link>
                 </div>
               );
             })}

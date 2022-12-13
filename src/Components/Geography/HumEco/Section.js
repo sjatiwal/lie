@@ -2,13 +2,37 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import Census from "./content/Census";
+import Communication from "./content/Communication";
 import Demography from "./content/Demography";
+import Transport from "./content/Demography";
+import Urbanization from "./content/Urbanization";
 
 export const ROUTES = [
   {
     path: "demography",
     element: <Demography />,
     name: "Demography",
+  },
+  {
+    path: "urbanization",
+    element: <Urbanization />,
+    name: "Urbanization",
+  },
+  {
+    path: "census",
+    element: <Census />,
+    name: "census",
+  },
+  {
+    path: "transport",
+    element: <Transport />,
+    name: "Transport",
+  },
+  {
+    path: "communication",
+    element: <Communication />,
+    name: "Communication",
   },
 ];
 
@@ -30,7 +54,7 @@ function Section() {
               return (
                 <div className="hover:bg-slate-400" key={`${item.name}`}>
                   <Link to={`/geography/human-economic/${item.path}`}>
-                    {item.name}
+                    <div>{item.name}</div>
                   </Link>
                 </div>
               );

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ROUTES = [
   {
-    path: "/ancient/pre-historic",
+    path: "/ancient/history",
     name: "Ancient",
   },
   {

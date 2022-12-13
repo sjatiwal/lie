@@ -91,7 +91,7 @@ function Section() {
               return (
                 <div className="hover:bg-slate-400" key={`${item.name}`}>
                   <Link to={`/art-culture/architecture/${item.path}`}>
-                    {item.name}
+                    <div>{item.name}</div>
                   </Link>
                 </div>
               );

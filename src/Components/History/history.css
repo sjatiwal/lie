@@ -1,14 +1,14 @@
-body {
-  min-height: 100vh;
-}
-
 @media (max-width: 280px) {
-  .Hheader,
-  .History {
+  .Hheader {
     flex-direction: column;
   }
 }
 
 .section {
   max-width: 180px;
+}
+@media (max-width: 900px) {
+  .Hbody {
+    width: 100%;
+  }
 }

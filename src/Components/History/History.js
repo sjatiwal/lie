@@ -1,17 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import "./History.css";
 
 import Ancient from "./Ancient/Ancient";
 import Medieval from "./medieval/Medieval";
 import Modern from "./Modern/Modern";
 import World from "./World/World";
-import Header from "./Header";
-import "./history.css";
 
 function History() {
   return (
     <>
-      <div className="AH mb-[0]">
+      <div className="AllHistory mb-[0]">
         {" "}
         <div className="sticky top-14 z-[2]">
           <Header />

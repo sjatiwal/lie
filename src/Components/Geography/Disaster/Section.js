@@ -2,13 +2,31 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import Cyclone from "./content/Cyclone";
 import Earthquake from "./content/Earthquake";
+import Tsunami from "./content/Tsunami";
+import Volcanoes from "./content/Volcanoes";
 
 export const ROUTES = [
   {
     path: "earthquake",
     element: <Earthquake />,
     name: "Earthquake",
+  },
+  {
+    path: "tsunami",
+    element: <Tsunami />,
+    name: "Tsunami",
+  },
+  {
+    path: "volcanoes",
+    element: <Volcanoes />,
+    name: "Volcanoes",
+  },
+  {
+    path: "cyclone",
+    element: <Cyclone />,
+    name: "Cyclone",
   },
 ];
 
@@ -30,7 +48,7 @@ function Section() {
               return (
                 <div className="hover:bg-slate-400" key={`${item.name}`}>
                   <Link to={`/geography/natural-disaster/${item.path}`}>
-                    {item.name}
+                    <div>{item.name}</div>
                   </Link>
                 </div>
               );

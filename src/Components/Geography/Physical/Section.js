@@ -12,6 +12,7 @@ import Landforms from "./content/Landforms";
 import PlateTectonic from "./content/PlateTectonic";
 import Rocks from "./content/Rocks";
 import TimeScale from "./content/TimeScale";
+import GeomorphicFeature from "./content/GeomorphicFeature";
 
 //Oceanography//
 import HydrologicalCycle from "./content/HydrologicalCycle";
@@ -27,6 +28,16 @@ import AtmosphericCirculation from "./content/AtmosphericCirculation";
 import Climatology from "./content/Climatology";
 import Insolation from "./content/Insolation";
 import WorldClimate from "./content/WorldClimate";
+
+//Indian Geography//
+import Climate from "./content/Climate";
+import DrainageSystem from "./content/DrainageSystem";
+import NaturalVegetation from "./content/NaturalVegetation";
+import Physiography from "./content/Physiography";
+import Soil from "./content/Soil";
+import SoilErosionConservation from "./content/SoilErosionConservation";
+import SoilFormation from "./content/SoilFormation";
+import SoilType from "./content/SoilType";
 
 export const ROUTES = [
   {
@@ -128,6 +139,51 @@ export const ROUTES = [
     path: "world-climate",
     element: <WorldClimate />,
     name: "World Climate",
+  },
+  {
+    path: "indian-physiography",
+    element: <Physiography />,
+    name: "Indian Physiography",
+  },
+  {
+    path: "drainage-system",
+    element: <DrainageSystem />,
+    name: "Drainage System",
+  },
+  {
+    path: "climate",
+    element: <Climate />,
+    name: "Climate/Monsoon",
+  },
+  {
+    path: "soil",
+    element: <Soil />,
+    name: "Soil",
+  },
+  {
+    path: "soil-formation",
+    element: <SoilFormation />,
+    name: "Soil Formation",
+  },
+  {
+    path: "soil-type",
+    element: <SoilType />,
+    name: "Soil Type",
+  },
+  {
+    path: "soil-erosion-conservation",
+    element: <SoilErosionConservation />,
+    name: "Soil Erosion & Conservation",
+  },
+  {
+    path: "natural-vegetation",
+    element: <NaturalVegetation />,
+    name: "Natural Vegetation",
+  },
+  {
+    path: "change-in-geomorphic-feature",
+    element: <GeomorphicFeature />,
+    name: "Change in Geomorphic Features",
   },
 ];
 

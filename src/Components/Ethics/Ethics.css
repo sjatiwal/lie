@@ -1,0 +1,5 @@
+@media (max-width: 260px) {
+  .EthicsHeader {
+    flex-direction: column;
+  }
+}

@@ -368,11 +368,13 @@ export default function Section() {
       </div>
       <div>
         {display ? (
-          <div className="section bg-gray-300  mb-[0]   pt-[.2em] pl-[.2em] pr-[.2em]">
+          <div className="section h-screen overflow-scroll bg-gray-300  mb-[0]   pt-[.2em] pl-[.2em] pr-[.2em]">
             {ROUTES.map((item) => {
               return (
                 <div className="hover:bg-slate-400" key={`${item.name}`}>
-                  <Link to={`/history/modern/${item.path}`}>{item.name}</Link>
+                  <Link to={`/history/modern/${item.path}`}>
+                    <div>{item.name}</div>
+                  </Link>
                 </div>
               );
             })}
